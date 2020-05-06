@@ -1,0 +1,3 @@
+# FoodPornBlocker
+Twitter上の飯テロ画像をブロックするchrome拡張機能です（開発中）
+Tensorflow.jsを用いることで、ローカルで機械学習による画像分類を行います。
