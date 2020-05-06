@@ -1,10 +1,12 @@
 function replace_image() {
     $('div').each(function(){
-        if (this.classList.contains('css-1dbjc4n') && !this.classList.contains('processed')){
+        // TODO 開いた画像は隠さないようにする
+        if (this.parentNode && this.parentNode.getAttribute("aria-label")=="画像" && this.classList.contains('css-1dbjc4n'&&'r-1niwhzg'&&'r-vvn4in'&&'r-u6sd8q'&&'r-4gszlv'&&'r-1p0dtai'&&'r-1pi2tsx'&&'r-1d2f490'&&'r-u8s1d'&&'r-zchlnj'&&'r-ipm5af'&&'r-13qz1uu'&&'r-1wyyakw') && !this.classList.contains('processed')){
             this.classList.add('processed');
-            this.style.backgroundImage = 'url("dummy")';
+            console.log(this.style.backgroundImage);
+            this.style.backgroundImage='url(' + chrome.runtime.getURL("test.jpg") + ')';
         }
-        // TODO 画像をDLし、判定するようにする
+        // TODO 画像を判定するようにする
     });
 };
 
@@ -32,7 +34,7 @@ const classifier = ml5.imageClassifier(model_url, modelLoaded);
 function app(set_src) {
 // Initialize the Image Classifier method with MobileNet
 
-    console.log('Loading mobilenet..');
+    console.log(set_src);
 
     // 画像分類の実行
     let imgEl = document.createElement('img');
@@ -48,6 +50,6 @@ function app(set_src) {
 
 }
 
-app(chrome.runtime.getURL("test.jpg"));
+//app(chrome.runtime.getURL("test.jpg"));
 //app("https://pbs.twimg.com/media/EXU_dDqUMAEP18x?format=jpg&name=900x900");
 //background-image: url("https://pbs.twimg.com/media/EXU_dDqUMAEP18x?format=jpg&name=900x900");
