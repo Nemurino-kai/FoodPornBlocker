@@ -4,7 +4,15 @@
     "description": "Twitter上の飯テロ画像をブロックします",
     "version": "1.0.0",
     "content_scripts": [{
-        "matches": [ "https://*.twitter.com/*" ],
-        "js": [ "jquery.min.js", "image_replace.js" ]
-    }]
+        "matches": [ "<all_urls>" ],
+        "js": ["p5.min.js","p5.dom.min.js","p5.sound.min.js","ml5.min.js","jquery.min.js", "image_replace.js" ]
+    }],
+    "permissions":[
+        "*://*.twitter.com/*",
+        "https://pbs.twimg.com/*"
+    ],
+    "web_accessible_resources":[
+        "mobilenet_v1_025_224/*",
+        "test.jpg"
+    ]
 }
