@@ -59,7 +59,7 @@ function replace_image() {
             app(image_url).then(
               (answer) =>{
                 if(isFood(answer)){
-                    this.style.backgroundImage='url(' + chrome.runtime.getURL("test.jpg") + ')';
+                    this.style.backgroundImage='url(' + chrome.runtime.getURL("replace.jpg") + ')';
                 }else{
                     this.style.backgroundImage='url(' + image_url + ')';
                 }

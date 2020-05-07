@@ -15,6 +15,6 @@
     }],
     "web_accessible_resources":[
         "mobilenet_v1_025_224/*",
-        "test.jpg"
+        "replace.jpg"
     ]
 }
