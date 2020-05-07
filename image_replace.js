@@ -50,7 +50,7 @@ function isFood(name){
 function replace_image() {
     // 非同期処理なので注意
     $('div').each(function(){
-        if (this.parentNode && this.parentNode.getAttribute("aria-label")=="画像" && this.classList.contains('css-1dbjc4n'&&'r-1niwhzg'&&'r-vvn4in'&&'r-u6sd8q'&&'r-4gszlv'&&'r-1p0dtai'&&'r-1pi2tsx'&&'r-1d2f490'&&'r-u8s1d'&&'r-zchlnj'&&'r-ipm5af'&&'r-13qz1uu'&&'r-1wyyakw') && !this.classList.contains('processed')){
+        if (this.parentNode && (this.parentNode.getAttribute("aria-label")=="画像"||this.parentNode.getAttribute("aria-label")=="Image") && !this.classList.contains('processed')){
             this.classList.add('processed');
             var image_url = this.style.backgroundImage.match(/\"(.+)\"/)[1]
             console.log("loaded:" + image_url);
@@ -71,14 +71,13 @@ function replace_image() {
     });
 };
 
-// When the model is loaded
+// モデルをロードした時のメッセージ
 function modelLoaded() {
     console.log('Model Loaded!');
 } 
 
 // 画像へのパスを入力し、予測結果をPromiseで返す
 async function app(set_src) {
-    // Initialize the Image Classifier method with MobileNet
     
     const model_url = chrome.runtime.getURL("mobilenet_v1_025_224/model.json")
 
@@ -86,9 +85,8 @@ async function app(set_src) {
 
     console.log("seted:" + set_src);
     
-    // 画像分類の実行
+    // 画像分類器に入れるelementの生成
     let imgEl = document.createElement('img');
-    imgEl.id = "img"
     //CORSに引っかからないように
     imgEl.crossOrigin = "anonymous"
     imgEl.src = set_src
@@ -117,3 +115,5 @@ observer.observe(document, {
 observer.observe(document.documentElement, {
     attributes: true
 });
+
+// ToDo: アイコンをクリックすることで、拡張機能をON/OFF できるようにする
