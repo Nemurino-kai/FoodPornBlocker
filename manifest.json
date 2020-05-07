@@ -1,8 +1,14 @@
 {
     "manifest_version": 2,
     "name":"FoodPornBlocker",
+    "short_name": "FoodBlocker",
     "description": "Twitter上の飯テロ画像をブロックします",
     "version": "1.0.0",
+    "icons":{
+        "16":"icons/16.png",
+        "64":"icons/64.png",
+        "128":"icons/128.png"
+    },
     "content_scripts": [{
         "matches": [ "*://*.twitter.com/*" ],
         "js": ["p5.min.js","p5.dom.min.js","ml5.min.js","jquery.min.js", "image_replace.js" ]
