@@ -4,16 +4,24 @@
     "short_name": "__MSG_extShortName__",
     "default_locale":"en_US",
     "description": "__MSG_extDescription__",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "icons":{
         "16":"icons/16.png",
         "64":"icons/64.png",
         "128":"icons/128.png"
     },
+    "permissions": [
+        "storage"
+    ],
     "content_scripts": [{
         "matches": [ "*://*.twitter.com/*" ],
         "js": ["p5.min.js","p5.dom.min.js","ml5.min.js","jquery.min.js", "image_replace.js" ]
     }],
+    "background": { "scripts": ["background.js"] },
+    "browser_action": {
+        "default_icon": "icons/16.png",
+        "default_title": "ON"
+    },
     "web_accessible_resources":[
         "mobilenet_v1_025_224/*",
         "replace.jpg"

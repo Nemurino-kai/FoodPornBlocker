@@ -55,6 +55,7 @@ function replace_image() {
             this.classList.add('processed');
             var image_url = this.style.backgroundImage.match(/\"(.+)\"/)[1]
             console.log("loaded:" + image_url);
+            // いったん隠す
             this.style.backgroundImage = 'url()';
 
             app(image_url).then(
@@ -105,13 +106,39 @@ async function app(set_src) {
     
 }
 
-replace_image();
-
+console.log("started")
 // ドキュメントの変化を監視
 var observer = new MutationObserver(replace_image);
-observer.observe(document, {
-    childList: true,
-    subtree: true,
-  });
 
-// ToDo: アイコンをクリックすることで、拡張機能をON/OFF できるようにする
+// 拡張機能を実行するか否か フラグをストレージからget
+var extension_flag = true;
+var default_data = {'key': true };
+// 非同期処理・コールバック関数しか使えない（ぴえん
+chrome.storage.sync.get(default_data, function (value) {
+
+    extension_flag = value.key;
+
+    if(extension_flag){
+        replace_image();
+        observer.observe(document, {
+            childList: true,
+            subtree: true,
+        });
+    }
+    
+    chrome.runtime.onMessage.addListener(function (set_flag) {
+        //alert(set_flag ? "ONにしました" : "OFFにしました")
+        extension_flag = set_flag
+        if(extension_flag){
+            replace_image();
+            observer.observe(document, {
+                childList: true,
+                subtree: true,
+            });
+        }else{
+            observer.disconnect();
+        }
+    });
+});
+
+// Icons made by Freepik from www.flaticon.com
