@@ -1,0 +1,11 @@
+{
+  "extName": {
+    "message": "FoodPornBlocker"
+  },
+  "extDescription": {
+    "message": "Blocking food porn images on Twitter."
+  },
+  "extShortName": {
+    "message": "FoodBlocker"
+  }
+}

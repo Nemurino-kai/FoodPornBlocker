@@ -1,0 +1,11 @@
+{
+  "extName": {
+    "message": "飯テロブロッカー"
+  },
+  "extDescription": {
+    "message": "Twitter上の飯テロ画像をブロックします"
+  },
+  "extShortName": {
+    "message": "飯テロブロッカー"
+  }
+}
