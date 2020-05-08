@@ -1,5 +1,5 @@
 # FoodPornBlocker
-Twitter上の飯テロ画像をブロックするchrome拡張機能です（開発中）<br>
+Twitter上の飯テロ画像をブロックするchrome拡張機能です<br>
 飯テロ画像を自動で検出し、画像を見えなくします。<br>
 夜遅く、Twitterを眺めているあなたの心と胃袋に平穏をもたらします。
 
