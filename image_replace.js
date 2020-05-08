@@ -32,7 +32,8 @@ const foods =[
     "soup bowl",
     "wok",
     "Dungeness crab",
-    "American lobster"
+    "American lobster",
+    "cup"
 ]
 
 function isFood(name){
@@ -112,8 +113,5 @@ observer.observe(document, {
     childList: true,
     subtree: true,
   });
-observer.observe(document.documentElement, {
-    attributes: true
-});
 
 // ToDo: アイコンをクリックすることで、拡張機能をON/OFF できるようにする
