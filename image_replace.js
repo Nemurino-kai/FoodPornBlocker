@@ -34,7 +34,9 @@ const foods =[
     "Dungeness crab",
     "American lobster",
     "cup",
-    "spaghetti squash"
+    "spaghetti squash",
+    "butternut squash",
+    "rotisserie"
 ]
 
 function isFood(name){
