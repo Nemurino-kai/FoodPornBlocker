@@ -6,3 +6,5 @@ Twitter上の飯テロ画像をブロックするchrome拡張機能です（開�
 ![C4](https://user-images.githubusercontent.com/40136659/81327973-169d5700-90d7-11ea-853d-61bf69e52ffe.png)
 
 ml5.jsを用いることで、ローカルで、機械学習(MobileNet)による画像分類を行っています。
+
+Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
