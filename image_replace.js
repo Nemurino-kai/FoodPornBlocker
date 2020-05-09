@@ -1,27 +1,27 @@
 // ImageNetのクラスのうち、飯テロ画像と認定するもの
 const foods =[
     "corn",
-    "bakery",
-    "cucumber",
-    "bagel",
-    "hot pot",
-    "meat loaf",
+    "bakery, bakeshop, bakehouse",
+    "cucumber, cuke",
+    "bagel, beigel",
+    "hot pot, hotpot",
+    "meat loaf, meatloaf",
     "guacamole",
     "eggnog",
     "potpie",
     "French loaf",
-    "hotdog",
+    "hotdog, hot dog, red hot",
     "burrito",
-    "pizza",
+    "pizza, pizza pie",
     "espresso",
-    "chocolate sauce",
-    "ice cream",
+    "chocolate sauce, chocolate syrup",
+    "ice cream, icecream",
     "cheeseburger",
     "carbonara",
     "burrito",
     "consomme",
     "plate",
-    "frying pan",
+    "frying pan, frypan, skillet",
     "trifle",
     "pretzel",
     "pizza, pizza pie",
@@ -31,8 +31,8 @@ const foods =[
     "acorn squash",
     "soup bowl",
     "wok",
-    "Dungeness crab",
-    "American lobster",
+    "Dungeness crab, Cancer magister",
+    "American lobster, Northern lobster, Maine lobster, Homarus americanus",
     "cup",
     "spaghetti squash",
     "butternut squash",
@@ -42,7 +42,7 @@ const foods =[
 function isFood(name){
     var food_flag = false;
     for(var i=0;i<foods.length;i++){
-        if(name.match(foods[i])){
+        if(name == foods[i]){
             food_flag=true;
             break;
         }
