@@ -9,4 +9,6 @@ ml5.jsを用いることで、ローカルで、機械学習(MobileNet)による
 
 [こちらから拡張機能をインストールできます](https://chrome.google.com/webstore/detail/food-porn-blocker/olpfpfbklfeikemgdohicmibkmfnboeh?hl=ja)
 
+[こちらが解説記事になります](https://qiita.com/DoubleZ/items/d32ad074c9eb35fe2823)
+
 Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
